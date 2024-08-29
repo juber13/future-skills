@@ -32,3 +32,9 @@ and allow user a new card and search for exiting card
    cd frontEnd
    run npm i to install the packages
 ---
+
+
+# images
+![](./images/Screenshot%202024-08-29%20123634.png)
+![](./images/Screenshot%202024-08-29%20123644.png)
+![](./images/Screenshot%202024-08-29%20123652.png)

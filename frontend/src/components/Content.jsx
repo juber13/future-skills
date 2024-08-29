@@ -30,7 +30,7 @@ const Content = () => {
     <div className='hero-section w-full items-center justify-center'>
       <div className='flex flex-col gap-5 bg-[#d3c2e7] w-full p-12'>
         <h1 className='text-5xl text-center font-medium'>How can we help?</h1>
-        <div className='border items-center p-3 sm:w-[40%] m-auto bg-white flex border-black rounded-md'>
+        <div className='border items-center p-3 sm:w-[40%] m-auto bg-white flex border-black rounded-md shadow-md'>
           <input
             type='text'
             placeholder='Search'
