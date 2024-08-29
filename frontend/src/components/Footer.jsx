@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <div className='footer-section mt-20 bg-black w-full text-white pt-10 pb-10'>
-      <div className='container flex  m-auto justify-around'>
+      <div className='container flex flex-wrap  m-auto justify-around'>
         <ul className='text-xs font-normal  h-[200px] hover:cursor-pointer'>
           <li className='text-xl font-medium mb-4'>Abstract</li>
           <li>Branches</li>

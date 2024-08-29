@@ -37,7 +37,7 @@ const CardDetails = () => {
     <div className='card-section mt-10'>
      {loading ? <h1 className="text-center">Loading...</h1>
       :
-      <div className='cards max-w-5xl gap-3 m-auto flex items-center justify-center'>
+      <div className='cards w-[90%] sm:max-w-5xl gap-3 m-auto flex items-center justify-center'>
         <div className='card  bg-gray-100 flex flex-col gap-1 relative max-w-[400px] h-auto min-h-[200px] pb-2 rounded-xl shadow-md pt-3'>
           <h2 className='text-lg ml-5 font-semibold'>{data?.title}</h2>
           <hr />

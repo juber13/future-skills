@@ -29,7 +29,7 @@ const Content = () => {
   return (
     <div className='hero-section w-full items-center justify-center'>
       <div className='flex flex-col gap-5 bg-[#d3c2e7] w-full p-12'>
-        <h1 className='text-5xl text-center font-medium'>How can we help?</h1>
+        <h1 className='sm:text-5xl text-2xl text-center font-medium'>How can we help?</h1>
         <div className='border items-center p-3 sm:w-[40%] m-auto bg-white flex border-black rounded-md shadow-md'>
           <input
             type='text'
@@ -40,9 +40,9 @@ const Content = () => {
           <GoArrowRight />
         </div>
       </div>
-      <div className='flex flex-wrap gap-4 items-center justify-center'>
+      <div className='grid sm:grid-cols-3 gap-4 w-[80%] flex-wrap m-auto items-center justify-center mt-7 '>
         {loading ? (
-          <p>Loading...</p>
+          <p className="text-center">Loading...</p>
         ) : (
           filteredData.map((card) => (
             <Card
