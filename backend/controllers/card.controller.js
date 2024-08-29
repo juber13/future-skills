@@ -47,7 +47,6 @@ const getAllCards = async(req, res) => {
 
 // get single card based on query
 const getSingleCard = async (req, res) => {
-  console.log('hittig')
   try {
     const { title } = req.query;
 
@@ -58,12 +57,10 @@ const getSingleCard = async (req, res) => {
     }
 
     const card = await Card.findOne({ title }); 
-    console.log(card)
+    
     if (!card) {
       return res.status(404).json({ message: "Card not found", success: false });
     }
-
-
     return res.status(200).json({ result: card, success: true });
   } 
   catch (err) {

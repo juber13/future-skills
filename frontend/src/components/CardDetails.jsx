@@ -9,22 +9,24 @@ const CardDetails = () => {
 //   const title = "valid-title"; 
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
+  const [loading , setLoading] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
+        setLoading(true);
         const res = await axios.get(
-          `/https://future-skills-7tfw.onrender.com/api/singleCard`,
-          {
-            params: { title },
-          }
+          `https://future-skills-7tfw.onrender.com/api/singleCard`,{params: { title },}
         );
+        
+        setLoading(false);
         setData(res.data.result);
-        // console.log(res)
-        // console.log(res.data.result)
       } catch (err) {
         setError(err);
         console.error("Error fetching data:", err);
+        setLoading(false);
+      }finally{
+        setLoading(false)
       }
     };
 
@@ -33,7 +35,9 @@ const CardDetails = () => {
 
   return (
     <div className='card-section mt-10'>
-      <div className='cards max-w-5xl gap-3 m-auto flex'>
+     {loading ? <h1 className="text-center">Loading...</h1>
+      :
+      <div className='cards max-w-5xl gap-3 m-auto flex items-center justify-center'>
         <div className='card  bg-gray-100 flex flex-col gap-1 relative max-w-[400px] h-auto min-h-[200px] pb-2 rounded-xl shadow-md pt-3'>
           <h2 className='text-lg ml-5 font-semibold'>{data?.title}</h2>
           <hr />
@@ -45,6 +49,8 @@ const CardDetails = () => {
           </Link> */}
         </div>
       </div>
+     }
+
     </div>
   );
 };
