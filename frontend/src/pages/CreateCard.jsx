@@ -17,12 +17,14 @@ const CreateCard = () => {
       validateOnChange: true,
       validateOnBlur: false,
       onSubmit: (values, action) => {
-        axios.post("/api/cards" , values).then(res => {
-          if(res.data.success == true){
-             toast.success("Card created");
-             action.resetForm();
-          }
-        })
+        axios
+          .post("https://future-skills-7tfw.onrender.com/api/cards", values)
+          .then((res) => {
+            if (res.data.success == true) {
+              toast.success("Card created");
+              action.resetForm();
+            }
+          });
       },
     });
 
