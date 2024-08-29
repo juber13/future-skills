@@ -2,6 +2,25 @@
 
 # [Hosted Link] (https://future-skills.vercel.app/);
 
+
+## question
+
+# How can you implement shared functionality across a component tree?
+ * There are different way to handle shared functionality we can use redux to manage the state , 
+ we just have to create store and reducers , inside reducers we can make function to do some action like adding updating the 
+ and more
+
+ * we can also use context api to manage the state context api is built in react, so we can easily import context api from react
+
+ # Why is the useState hook appropriate for handling state in a complex component?
+
+ * Yes we can say useState can manage and handle  the state but it is not good choice to use useState hook when you have complex app where you have to show same info with different components , it will cause some prop drilling problem where you have pass the props to each component to react the target component
+
+
+
+
+
+
 ## Description
 This project is a full-stack application that includes a backend API and a frontend user interface. The backend is built with Node.js and Express, while the frontend is developed using React. The application allows users to search and view cards related to various topics.
 and allow user a new card and search for exiting card
