@@ -13,9 +13,12 @@ const CardDetails = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`/api/singleCard` , {
-            params : { title }
-        });
+        const res = await axios.get(
+          `/https://future-skills-7tfw.onrender.com/api/singleCard`,
+          {
+            params: { title },
+          }
+        );
         setData(res.data.result);
         // console.log(res)
         // console.log(res.data.result)

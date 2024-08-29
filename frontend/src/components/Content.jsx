@@ -10,7 +10,7 @@ const Content = () => {
 
   useEffect(() => {
     axios
-      .get("/api/cards")
+      .get("https://future-skills-7tfw.onrender.com/api/cards")
       .then((res) => {
         setData(res.data.result);
         setLoading(false);
